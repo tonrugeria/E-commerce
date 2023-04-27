@@ -1,15 +1,9 @@
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/routes/home/home.component";
+import Navigation from "./components/routes/navigation/navigation.component";
 
-const Navigation = () => {
-  return (
-    <div>
-      <div>
-        <h1>I am the navigation</h1>
-      </div>
-      <Outlet />
-    </div>
-  );
+const Shop = () => {
+  return <h1>I am the Shop</h1>;
 };
 
 const App = () => {
@@ -17,6 +11,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
       </Route>
     </Routes>
   );
